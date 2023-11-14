@@ -11,10 +11,12 @@ class ViewController: UIViewController {
     @IBOutlet var button1: UIButton!
     @IBOutlet var button2: UIButton!
     @IBOutlet var button3: UIButton!
+    @IBOutlet var scoreLabel: UILabel!
     
     var countries = [String]()
     var score = 0
     var correctAnswer = 0
+    var count = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,15 +50,25 @@ class ViewController: UIViewController {
         var title: String
 
         if sender.tag == correctAnswer {
-            title = "Correct"
+            title = "Yay! That's correct!"
             score += 1
+            count += 1
         } else {
-            title = "Wrong"
+            title = "That's the flag of \(countries[sender.tag].uppercased())!"
             score -= 1
+            count += 1
         }
         
-        let ac = UIAlertController(title: title, message: "Your score is \(score).", preferredStyle: .alert)
-        ac.addAction(UIAlertAction(title: "Continue", style: .default, handler: askQuestion))
-        present(ac, animated: true)
+        scoreLabel.text = String(format: "Your score is \(score).")
+        
+        if count % 10 == 0 {
+            let ac = UIAlertController(title: title, message: "Your final score is \(score)!", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "Continue", style: .default, handler: askQuestion))
+            present(ac, animated: true)
+        } else {
+            let ac = UIAlertController(title: title, message: "Keep going...", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "Continue", style: .default, handler: askQuestion))
+            present(ac, animated: true)
+        }
     }
 }

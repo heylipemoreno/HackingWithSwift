@@ -41,12 +41,20 @@
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hec-xO-Yqh"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick the right flag!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3xl-gW-HdE">
+                                <rect key="frame" x="127.33333333333333" y="542" width="138.33333333333337" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="LFO-rb-EXa" firstAttribute="top" secondItem="ExM-BL-LNg" secondAttribute="bottom" constant="30" id="CvP-bs-Gbt"/>
                             <constraint firstItem="LFO-rb-EXa" firstAttribute="centerX" secondItem="ExM-BL-LNg" secondAttribute="centerX" id="RYd-Sh-jL4"/>
+                            <constraint firstItem="3xl-gW-HdE" firstAttribute="centerX" secondItem="LFO-rb-EXa" secondAttribute="centerX" id="Uig-RQ-pSt"/>
+                            <constraint firstItem="3xl-gW-HdE" firstAttribute="top" secondItem="LFO-rb-EXa" secondAttribute="bottom" constant="40" id="Zqs-eh-4Ra"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="awM-PS-E0K" secondAttribute="top" constant="3" id="cHv-oF-9gT"/>
                             <constraint firstItem="ExM-BL-LNg" firstAttribute="top" secondItem="awM-PS-E0K" secondAttribute="bottom" constant="30" id="sv5-20-wdx"/>
                             <constraint firstItem="awM-PS-E0K" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="yXr-4f-ckV"/>
@@ -58,6 +66,7 @@
                         <outlet property="button1" destination="awM-PS-E0K" id="RX2-Hk-iV4"/>
                         <outlet property="button2" destination="ExM-BL-LNg" id="mzP-zB-nSo"/>
                         <outlet property="button3" destination="LFO-rb-EXa" id="37m-DB-48T"/>
+                        <outlet property="scoreLabel" destination="3xl-gW-HdE" id="6df-vx-AMK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
