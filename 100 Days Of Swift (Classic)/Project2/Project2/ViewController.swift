@@ -62,7 +62,7 @@ class ViewController: UIViewController {
         scoreLabel.text = String(format: "Your score is \(score).")
         
         if count % 10 == 0 {
-            let ac = UIAlertController(title: title, message: "Your final score is \(score)!", preferredStyle: .alert)
+            let ac = UIAlertController(title: title, message: "10 rounds later... Your score is \(score)!", preferredStyle: .alert)
             ac.addAction(UIAlertAction(title: "Continue", style: .default, handler: askQuestion))
             present(ac, animated: true)
         } else {
