@@ -11,14 +11,14 @@ import WebKit
 class ViewController: UIViewController, WKNavigationDelegate {
     var webView: WKWebView!
     var progressView: UIProgressView!
-    var websites = ["globo.com", "g1.globo.com", "ge.globo.com"]
+    var websites = ["google.com", "g1.globo.com", "ge.globo.com", "gshow.globo.com"]
     
     override func loadView() {
         webView = WKWebView()
         webView.navigationDelegate = self
         view = webView
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -78,7 +78,7 @@ class ViewController: UIViewController, WKNavigationDelegate {
         
         if let host = url?.host {
             for website in websites {
-                if host.contains(website) {
+                if host.contains (website) {
                     decisionHandler(.allow)
                     return
                 }
